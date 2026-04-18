@@ -1,0 +1,71 @@
+.navbar-container {
+  margin: 1.5rem auto;
+  max-width: 800px;
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  padding: 0 1rem; /* Margen interno para que no toque los bordes en móviles */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 50px; /* Radio fijo para estilo 'pastilla' */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.025em;
+  
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-wrapper img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+/* Estilo base de los links */
+.link-nav {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+/* Hover: cuando pasas el mouse */
+.link-nav:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Activo: la clase que pone el ternario */
+.link-nav.activo {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
