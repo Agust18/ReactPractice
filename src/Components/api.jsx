@@ -2,13 +2,21 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Api = () => {
+    //guardamos los datos de la api 
+    //personajes es un array que contiene los datos de la api 
+    //setPersonajes es una funcion que permite actualizar el estado de personajes 
     const [personajes, setPersonajes] = useState([]);
-
+    //useEffect es un hook que permite ejecutar
+    //codigo cuando el componente se renderiza por primera vez
     useEffect(() => {
+        //funcion asincrona que permite obtener los datos de la api 
         const obtenerDatos = async () => {
             try {
+                //fetch es una funcion que permite obtener datos de una api 
                 const response = await fetch('https://rickandmortyapi.com/api/character');
+                //convertimos la respuesta a json 
                 const data = await response.json();
+                //actualizamos el estado de personajes 
                 setPersonajes(data.results);
             } catch (error) {
                 console.error("Error al buscar datos:", error);

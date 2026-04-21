@@ -11,6 +11,8 @@ import DetallePersonaje from "./Components/detallePersonaje";
 import Contacto from "./Components/contacto";
 import TaskInput from "./Components/practica-en-clase/TaskInput";
 import TaskList from "./Components/practica-en-clase/Tasklist";
+import ContadorUseEffect from "./Components/practica-en-clase/ContadorUseEffect";
+import Timeout from "./Components/practica-en-clase/SetTimeout";
 
 
 
@@ -66,14 +68,16 @@ function App() {
         <Route path="/" element={
           <>
             {/* <Hero /> */}
-            <TaskInput
+            {/* <TaskInput
               agregar={Agregar}
-            />
-            <TaskList
+            /> */}
+            {/* <TaskList
               tareas={tareas}
               cambiarEstado={Estado}
               eliminar={eliminar}
-            />
+            /> */}
+            {<ContadorUseEffect />}
+            {/* <Timeout /> */}
           </>
         } />
         <Route path="/" element={<h1>Bienvenido a mi Web</h1>} />
